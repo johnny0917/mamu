@@ -1,0 +1,123 @@
+2016-02-14 13:34:17,603 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mam.core:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mam.core\pom.xml.
+2016-02-14 13:34:17,665 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.conventer:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.conventer\pom.xml.
+2016-02-14 13:34:18,056 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.repository:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.repository\pom.xml.
+2016-02-14 13:34:18,103 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.filestorage:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.filestorage\pom.xml.
+2016-02-14 13:34:18,150 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.rest:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.rest\pom.xml.
+2016-02-14 13:34:18,196 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.schedule:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.schedule\pom.xml.
+2016-02-14 13:34:18,243 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.search:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.search\pom.xml.
+2016-02-14 13:34:18,290 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.usercenter:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.usercenter\pom.xml.
+2016-02-14 13:34:18,337 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.visitcontrol:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.visitcontrol\pom.xml.
+2016-02-14 13:34:18,368 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.versioncontrol:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.versioncontrol\pom.xml.
+2016-02-14 13:34:18,415 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.staticts:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.staticts\pom.xml.
+2016-02-14 13:34:18,478 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.sdk:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.sdk\pom.xml.
+2016-02-14 13:34:21,118 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar
+2016-02-14 13:34:22,228 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar
+2016-02-14 13:34:22,619 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.docs:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.docs\pom.xml.
+2016-02-14 13:34:22,665 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.resmanager.webui:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\pom.xml.
+2016-02-14 13:34:23,822 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.pom
+2016-02-14 13:34:24,072 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.pom
+2016-02-14 13:34:24,447 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom
+2016-02-14 13:34:24,728 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom
+2016-02-14 13:34:25,009 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom
+2016-02-14 13:34:25,228 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom
+2016-02-14 13:34:25,744 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+2016-02-14 13:34:25,978 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+2016-02-14 13:34:26,212 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+2016-02-14 13:34:26,462 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+2016-02-14 13:34:26,759 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/9/maven-parent-9.pom
+2016-02-14 13:34:27,072 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/9/maven-parent-9.pom
+2016-02-14 13:34:27,337 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+2016-02-14 13:34:27,603 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+2016-02-14 13:34:27,900 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+2016-02-14 13:34:28,181 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+2016-02-14 13:34:28,447 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2016-02-14 13:34:28,728 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2016-02-14 13:34:29,087 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2016-02-14 13:34:31,619 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2016-02-14 13:34:32,181 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2016-02-14 13:34:32,572 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2016-02-14 13:34:35,822 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.filestorage/src/main/java
+2016-02-14 13:34:35,822 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.filestorage/src/test/java
+2016-02-14 13:34:35,978 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.usercenter/src/main/java
+2016-02-14 13:34:35,978 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.usercenter/src/test/java
+2016-02-14 13:34:36,009 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mam.core/src/main/java
+2016-02-14 13:34:36,009 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mam.core/src/test/java
+2016-02-14 13:34:36,025 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.schedule/src/main/java
+2016-02-14 13:34:36,025 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.schedule/src/test/java
+2016-02-14 13:34:36,056 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.resmanager.webui/src/main/java
+2016-02-14 13:34:36,056 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.resmanager.webui/src/test/java
+2016-02-14 13:34:36,806 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.versioncontrol/src/main/java
+2016-02-14 13:34:36,806 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.versioncontrol/src/test/java
+2016-02-14 13:34:36,822 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.repository/src/main/java
+2016-02-14 13:34:36,822 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.repository/src/test/java
+2016-02-14 13:34:36,853 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.docs/src/main/java
+2016-02-14 13:34:36,853 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.docs/src/test/java
+2016-02-14 13:34:36,916 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.conventer/src/main/java
+2016-02-14 13:34:36,916 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.conventer/src/test/java
+2016-02-14 13:34:36,947 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.sdk/src/main/java
+2016-02-14 13:34:36,947 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.sdk/src/test/java
+2016-02-14 13:34:36,962 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.visitcontrol/src/main/java
+2016-02-14 13:34:36,962 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.visitcontrol/src/test/java
+2016-02-14 13:34:36,978 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.search/src/main/java
+2016-02-14 13:34:36,978 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.search/src/test/java
+2016-02-14 13:34:37,009 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.rest/src/main/java
+2016-02-14 13:34:37,009 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.rest/src/test/java
+2016-02-14 13:34:37,025 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.staticts/src/main/java
+2016-02-14 13:34:37,025 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mamu.staticts/src/test/java
+2016-02-14 13:34:37,041 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 14 project(s) in 25 sec
+2016-02-14 13:34:37,759 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,759 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mam.core\src\main\resources
+2016-02-14 13:34:37,759 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,759 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mam.core\src\test\resources
+2016-02-14 13:34:37,775 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,775 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.conventer\src\main\resources
+2016-02-14 13:34:37,791 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,791 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.conventer\src\test\resources
+2016-02-14 13:34:37,916 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,916 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.docs\src\main\resources
+2016-02-14 13:34:37,916 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,916 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.docs\src\test\resources
+2016-02-14 13:34:37,931 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,931 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.filestorage\src\main\resources
+2016-02-14 13:34:37,931 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,931 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.filestorage\src\test\resources
+2016-02-14 13:34:37,947 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,962 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.repository\src\main\resources
+2016-02-14 13:34:37,962 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,962 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.repository\src\test\resources
+2016-02-14 13:34:37,978 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,994 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\src\main\resources
+2016-02-14 13:34:37,994 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:37,994 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\src\test\resources
+2016-02-14 13:34:38,009 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,009 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.rest\src\main\resources
+2016-02-14 13:34:38,009 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,009 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.rest\src\test\resources
+2016-02-14 13:34:38,025 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,025 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.schedule\src\main\resources
+2016-02-14 13:34:38,025 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,041 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.schedule\src\test\resources
+2016-02-14 13:34:38,056 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,056 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.sdk\src\main\resources
+2016-02-14 13:34:38,056 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,056 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.sdk\src\test\resources
+2016-02-14 13:34:38,072 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,072 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.search\src\main\resources
+2016-02-14 13:34:38,072 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,072 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.search\src\test\resources
+2016-02-14 13:34:38,087 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,087 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.staticts\src\main\resources
+2016-02-14 13:34:38,103 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,103 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.staticts\src\test\resources
+2016-02-14 13:34:38,119 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,119 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.usercenter\src\main\resources
+2016-02-14 13:34:38,119 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,119 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.usercenter\src\test\resources
+2016-02-14 13:34:38,134 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,134 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.versioncontrol\src\main\resources
+2016-02-14 13:34:38,134 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,134 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.versioncontrol\src\test\resources
+2016-02-14 13:34:38,166 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,166 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.visitcontrol\src\main\resources
+2016-02-14 13:34:38,166 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-14 13:34:38,166 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.visitcontrol\src\test\resources

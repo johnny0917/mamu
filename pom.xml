@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 	<name>mamu</name>
 	<modules>
-		<module>mam.core</module>
+		<module>mamu.core</module>
 		<module>mamu.conventer</module>
 		<module>mamu.repository</module>
 		<module>mamu.filestorage</module>
