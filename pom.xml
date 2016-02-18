@@ -16,7 +16,7 @@
 		<module>mamu.search</module>
 		<module>mamu.usercenter</module>
 		<module>mamu.visitcontrol</module>
-		<module>mamu.versioncontrol</module>
+		
 		<module>mamu.staticts</module>
 		<module>mamu.sdk</module>
 		<module>mamu.docs</module>
