@@ -13,10 +13,12 @@
 		<module>mamu.filestorage</module>
 		<module>mamu.rest</module>
 		<module>mamu.schedule</module>
-		<module>mamu.search</module>
 		<module>mamu.usercenter</module>
+<<<<<<< Updated upstream
 		
 		
+=======
+>>>>>>> Stashed changes
 		<module>mamu.staticts</module>
 		<module>mamu.sdk</module>
 		<module>mamu.docs</module>
