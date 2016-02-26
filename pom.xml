@@ -14,15 +14,11 @@
 		<module>mamu.rest</module>
 		<module>mamu.schedule</module>
 		<module>mamu.usercenter</module>
-<<<<<<< Updated upstream
-		
-		
-=======
->>>>>>> Stashed changes
 		<module>mamu.staticts</module>
 		<module>mamu.sdk</module>
 		<module>mamu.docs</module>
 		<module>mamu.resmanager.webui</module>
+		<module>mamu.search</module>
 	</modules>
 	<build>
 		<finalName>mamu</finalName>
