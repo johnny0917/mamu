@@ -36,7 +36,7 @@ public class TestNetwork {
 		System.out.println("BootstrapPort:"+netConfig.getBootstrapPort());
 		System.out.println("nodeId:"+netConfig.getNodeID());
 		System.out.println("port:"+netConfig.getPort());
-		System.out.println("Peer:"+netConfig.getBootstapPeer());
+		System.out.println("Peer:"+netConfig.getBootstrapPort());
 		System.out.println("address:"+netConfig.getBootstrapAddress());
 		System.out.println("#file config infomation:");
 		System.out.println("maxFileSize:"+fileConfig.getMaxFileSize());
