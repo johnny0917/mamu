@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="F:\github_projects\mamu_workspace"/>
 			<item value="F:\github_projects\mamu_workspace\mamu"/>
 		</list>
 		<list key="projectNameTemplate">
