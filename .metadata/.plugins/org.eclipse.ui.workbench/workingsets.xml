@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1455428051150_1" label="mamu" name="mamu">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.core" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.conventer" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.repository" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.filestorage" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.rest" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.schedule" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.usercenter" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.resmanager.webui" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.staticts" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.sdk" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.conventer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.usercenter" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.filestorage" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.docs" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.resmanager.webui" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.schedule" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.search" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mamu.repository" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1455428009829_0" label="Window Working Set" name="Aggregate for window 1455428009829"/>
 </workingSetManager>
