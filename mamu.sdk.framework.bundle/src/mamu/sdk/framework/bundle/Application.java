@@ -23,6 +23,7 @@ public class Application implements IApplication {
 //			} else if (InstallVertIOService.getInstance().getVertXIOState() == 1) {
 //				return IApplication.EXIT_RESTART;
 //			}
+			
 			Thread.sleep(5*1000);
 			System.out.println("123");
             return IApplication.EXIT_OK;
