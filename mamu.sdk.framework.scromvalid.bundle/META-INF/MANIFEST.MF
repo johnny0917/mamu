@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Bundle
+Bundle-SymbolicName: mamu.sdk.framework.scromvalid.bundle
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: mamu.sdk.framework.scromvalid.bundle.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
