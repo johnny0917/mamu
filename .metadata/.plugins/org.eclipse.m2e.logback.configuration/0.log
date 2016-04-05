@@ -742,3 +742,51 @@
 2016-03-07 15:33:30,863 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.usercenter\src\main\resources
 2016-03-07 15:33:30,864 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
 2016-03-07 15:33:30,866 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.usercenter\src\test\resources
+2016-03-24 14:23:47,321 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.conventer:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.conventer\pom.xml.
+2016-03-24 14:23:48,168 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.core:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.core\pom.xml.
+2016-03-24 14:23:48,323 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.core:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.core\pom.xml.
+2016-03-24 14:23:49,030 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:49,034 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.core\src\main\resources
+2016-03-24 14:23:49,035 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:49,040 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.core\src\test\resources
+2016-03-24 14:23:49,236 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.docs:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.docs\pom.xml.
+2016-03-24 14:23:49,274 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.nd.gaea:nd-rest:jar:0.9.6 is missing, no dependency information available
+2016-03-24 14:23:49,473 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:49,481 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-03-24 14:23:49,485 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:49,488 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.docs\src\test\resources
+2016-03-24 14:23:49,950 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.repository:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.repository\pom.xml.
+2016-03-24 14:23:50,906 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:50,910 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-03-24 14:23:50,914 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:50,917 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.repository\src\test\resources
+2016-03-24 14:23:50,982 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.resmanager.webui:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\pom.xml.
+2016-03-24 14:23:51,018 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:51,021 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\src\main\resources
+2016-03-24 14:23:51,022 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:51,025 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\src\test\resources
+2016-03-24 14:23:51,647 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:51,654 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-03-24 14:23:51,658 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-24 14:23:51,661 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\github_projects\mamu_workspace\mamu\mamu.repository\src\test\resources
+2016-03-24 14:23:52,130 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.conventer:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.conventer\pom.xml.
+2016-03-24 14:23:52,173 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.core:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.core\pom.xml.
+2016-03-24 14:23:52,469 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.docs:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.docs\pom.xml.
+2016-03-24 14:23:52,491 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.nd.gaea:nd-rest:jar:0.9.6 is missing, no dependency information available
+2016-03-24 14:23:52,651 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.filestorage:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.filestorage\pom.xml.
+2016-03-24 14:23:52,694 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.repository:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.repository\pom.xml.
+2016-03-24 14:23:53,015 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.resmanager.webui:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.resmanager.webui\pom.xml.
+2016-03-24 14:23:53,059 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.rest:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.rest\pom.xml.
+2016-03-24 14:23:53,106 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.schedule:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.schedule\pom.xml.
+2016-03-24 14:23:53,148 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.sdk:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.sdk\pom.xml.
+2016-03-24 14:23:53,190 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.search:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.search\pom.xml.
+2016-03-24 14:23:53,306 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.staticts:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.staticts\pom.xml.
+2016-03-24 14:23:53,347 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mamu.edu:mamu.usercenter:0.0.1-SNAPSHOT @ F:\github_projects\mamu_workspace\mamu\mamu.usercenter\pom.xml.
+2016-03-24 14:26:50,606 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-03-24 14:36:08,529 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @747629ms
+2016-03-24 14:36:08,599 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-03-24 14:36:08,630 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@15af606{/help,null,AVAILABLE}
+2016-03-24 14:36:08,642 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@1638695{HTTP/1.1}{127.0.0.1:59032}
+2016-03-24 14:36:08,643 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @747743ms
+2016-04-05 20:44:48,410 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@1638695{HTTP/1.1}{127.0.0.1:0}
+2016-04-05 20:44:48,427 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@15af606{/help,null,UNAVAILABLE}
