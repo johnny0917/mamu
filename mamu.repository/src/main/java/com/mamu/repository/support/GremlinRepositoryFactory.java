@@ -25,7 +25,7 @@ import java.lang.reflect.Constructor;
 /**
  * A {@link RepositoryFactorySupport} for Gremlin.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinRepositoryFactory extends RepositoryFactorySupport {
 

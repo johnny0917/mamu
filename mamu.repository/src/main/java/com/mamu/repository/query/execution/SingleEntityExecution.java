@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 /**
  * Executes the query to return a single entity.
  *
- * @author Gman
+ * @author Johnny
  */
 @SuppressWarnings("unchecked")
 public class SingleEntityExecution extends AbstractGremlinExecution {

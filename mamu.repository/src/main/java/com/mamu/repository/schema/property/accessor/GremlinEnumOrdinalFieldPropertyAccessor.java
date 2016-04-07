@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 /**
  * A {@link AbstractGremlinFieldPropertyAccessor} for enum properties that will be mapped with the ordinal (integer).
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinEnumOrdinalFieldPropertyAccessor extends AbstractGremlinFieldPropertyAccessor<Integer> {
 

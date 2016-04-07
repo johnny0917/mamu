@@ -8,7 +8,7 @@ import java.util.Collection;
 /**
  * A {@link AbstractGremlinFieldPropertyAccessor} for enum properties that will be mapped with the name (String).
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinEnumStringCollectionFieldPropertyAccessor extends AbstractGremlinFieldPropertyAccessor<String> {
     protected Class<? extends Enum> numnum;

@@ -1,12 +1,12 @@
-package org.springframework.data.gremlin.schema.property;
+package com.mamu.repository.schema.property;
 
-import com.tinkerpop.blueprints.Direction;
-import org.springframework.data.gremlin.schema.property.mapper.GremlinLinkPropertyMapper;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import com.mamu.repository.schema.property.mapper.GremlinLinkPropertyMapper;
 
 /**
  * A {@link GremlinRelatedProperty} accessor for linked properties (one-to-one relationships).
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinLinkProperty<C> extends GremlinRelatedProperty<C> {
 

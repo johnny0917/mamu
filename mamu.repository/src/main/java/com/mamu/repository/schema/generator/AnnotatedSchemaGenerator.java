@@ -5,7 +5,7 @@ import java.lang.annotation.Annotation;
 /**
  * Interface defining an annotated {@link SchemaGenerator} providing the entity and embedded annotation types.
  *
- * @author Gman
+ * @author Johnny
  */
 public interface AnnotatedSchemaGenerator extends SchemaGenerator {
     Class<? extends Annotation> getVertexAnnotationType();

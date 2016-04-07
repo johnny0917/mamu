@@ -1,4 +1,4 @@
-package org.springframework.data.gremlin.schema;
+package com.mamu.repository.schema;
 
 import org.reflections.Reflections;
 import org.reflections.scanners.TypeAnnotationsScanner;
@@ -10,12 +10,12 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.core.Ordered;
-import org.springframework.data.gremlin.schema.generator.AnnotatedSchemaGenerator;
-import org.springframework.data.gremlin.schema.generator.DefaultSchemaGenerator;
-import org.springframework.data.gremlin.schema.generator.SchemaGenerator;
-import org.springframework.data.gremlin.schema.generator.SchemaGeneratorException;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
-import org.springframework.data.gremlin.schema.property.GremlinRelatedProperty;
+import com.mamu.repository.schema.generator.AnnotatedSchemaGenerator;
+import com.mamu.repository.schema.generator.DefaultSchemaGenerator;
+import com.mamu.repository.schema.generator.SchemaGenerator;
+import com.mamu.repository.schema.generator.SchemaGeneratorException;
+import com.mamu.repository.schema.property.GremlinProperty;
+import com.mamu.repository.schema.property.GremlinRelatedProperty;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
@@ -30,7 +30,7 @@ import java.util.function.Predicate;
 /**
  * A BeanFactoryPostProcessor for generating {@link GremlinSchema}s and registering them with Spring.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinBeanPostProcessor implements BeanFactoryPostProcessor, Ordered {
 

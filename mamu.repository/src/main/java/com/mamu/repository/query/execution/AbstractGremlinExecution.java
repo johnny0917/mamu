@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * Query execution strategies.
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractGremlinExecution {
 

@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * The base class to implement {@link RepositoryQuery}s for Gremlin.
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractGremlinQuery implements RepositoryQuery {
 

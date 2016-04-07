@@ -14,7 +14,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
  * {@link org.springframework.transaction.PlatformTransactionManager} implementation
  * for Gremlin.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinTransactionManager extends AbstractPlatformTransactionManager implements ResourceTransactionManager {
 
@@ -22,14 +22,16 @@ public class GremlinTransactionManager extends AbstractPlatformTransactionManage
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GremlinTransactionManager.class);
 
-    private GremlinGraphFactory graphFactory;
+    @SuppressWarnings("rawtypes")
+	private GremlinGraphFactory graphFactory;
 
     /**
      * Instantiates a new GremlinTransactionManager with the given GremlinGraphFactory.
      *
      * @param graphFactory the GremlinGraphFactory
      */
-    public GremlinTransactionManager(GremlinGraphFactory graphFactory) {
+    @SuppressWarnings("rawtypes")
+	public GremlinTransactionManager(GremlinGraphFactory graphFactory) {
         super();
         this.graphFactory = graphFactory;
     }

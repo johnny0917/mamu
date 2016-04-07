@@ -3,10 +3,14 @@ package com.mamu.repository.query;
 import org.apache.tinkerpop.gremlin.process.traversal.Compare;
 import org.apache.tinkerpop.gremlin.process.traversal.Contains;
 import org.apache.tinkerpop.gremlin.structure.Direction;
-import com.tinkerpop.blueprints.Predicate;
-import com.tinkerpop.gremlin.java.GremlinPipeline;
-import com.tinkerpop.pipes.Pipe;
-import com.tinkerpop.pipes.filter.AndFilterPipe;
+
+import org.apache.tinkerpop.gremlin.process.traversal.P;
+import org.apache.tinkerpop.gremlin.process.traversal.Traversal;
+import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal;
+import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource;
+import org.apache.tinkerpop.gremlin.process.traversal.step.filter.FilterStep;
+import org.apache.tinkerpop.gremlin.process.traversal.step.filter.OrStep;
+import org.apache.tinkerpop.gremlin.process.traversal.step.sideEffect.StartStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -25,14 +29,15 @@ import org.springframework.data.repository.query.parser.PartTree;
 
 import java.util.Iterator;
 import java.util.Spliterator;
+import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 
 /**
- * Concrete {@link AbstractQueryCreator} for Gremlin.
+ * 创建基于 {@link AbstractQueryCreator} 的Gremlin查询构建器.
  *
- * @author Gman
+ * @author Johnny
  */
-public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, GremlinPipeline> {
+public class GremlinQueryCreator extends AbstractQueryCreator<GraphTraversal, GraphTraversal> {
 
     private static final Logger logger = LoggerFactory.getLogger(GremlinQueryCreator.class);
 
@@ -57,24 +62,27 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
     }
 
     @Override
-    protected GremlinPipeline create(Part part, Iterator<Object> iterator) {
+    protected GraphTraversal create(Part part, Iterator<Object> iterator) {
         return toCondition(part, iterator);
     }
 
     @Override
-    protected GremlinPipeline and(Part part, GremlinPipeline base, Iterator<Object> iterator) {
-        Pipe lastPipe = (Pipe) base.getPipes().get(base.getPipes().size() - 1);
-        if (lastPipe instanceof AndFilterPipe) {
-            return base.add(toCondition(part, iterator));
+    protected GraphTraversal and(Part part, GraphTraversal base, Iterator<Object> iterator) {
+    	//GraphTraversal lastPipe = (GraphTraversal) base.getPipes().get(base.getPipes().size() - 1);
+    	GraphTraversal lastPipe = (GraphTraversal) base.barrier().next(Integer.parseInt(base.count().value().toString()) - 1);
+        if (lastPipe instanceof FilterStep) {
+        	
+            return base.and(toCondition(part, iterator));
         }
-        GremlinPipeline andPipeline = new GremlinPipeline();
+        GraphTraversal andPipeline = (GraphTraversal) GraphTraversalSource.standard().create(factory.graph());
         andPipeline.and(base, toCondition(part, iterator));
         return andPipeline;
     }
 
     @Override
-    protected GremlinPipeline or(GremlinPipeline base, GremlinPipeline criteria) {
-        return new GremlinPipeline().or(base, criteria);
+    protected GraphTraversal or(GraphTraversal base, GraphTraversal criteria) {
+    	GraphTraversal g = (GraphTraversal) factory.graph().traversal();
+    	return g.or(base,criteria);
     }
 
     public boolean isCountQuery() {
@@ -82,11 +90,12 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
     }
 
     @Override
-    protected GremlinPipeline complete(GremlinPipeline criteria, Sort sort) {
-        Pageable pageable = accessor.getPageable();
-        GremlinPipeline pipeline = new GremlinPipeline(factory.graph());
+    protected GraphTraversal complete(GraphTraversal criteria, Sort sort) {
+        //Pageable pageable = accessor.getPageable();
+        GraphTraversal pipeline = (GraphTraversal) factory.graph().traversal();
         if (schema.isEdgeSchema()) {
-            pipeline = pipeline.V().add(criteria);
+            //pipeline = pipeline.V().add(criteria);
+            criteria.addV();
         } else if (schema.isVertexSchema()) {
             pipeline = pipeline.V().and(criteria);
         }
@@ -95,9 +104,9 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
         return pipeline;
     }
 
-    protected GremlinPipeline toCondition(Part part, Iterator<Object> iterator) {
+    protected GraphTraversal toCondition(Part part, Iterator<Object> iterator) {
 
-        GremlinPipeline pipeline = new GremlinPipeline();
+    	GraphTraversal pipeline = (GraphTraversal) factory.graph().traversal();
         PropertyPath path = part.getProperty();
         PropertyPath leafProperty = path.getLeafProperty();
         String leafSegment = leafProperty.getSegment();
@@ -179,58 +188,60 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
 
     }
 
-    private GremlinPipeline includeCondition(Part.Type type, String property, GremlinPipeline pipeline, Iterator iterator) {
+    private GraphTraversal includeCondition(Part.Type type, String property, GraphTraversal pipeline, Iterator iterator) {
         switch (type) {
         case AFTER:
         case GREATER_THAN:
-            pipeline.has(property, Compare.GREATER_THAN, iterator.next());
+            pipeline.has(property, Compare.gt.toString(), iterator.next());
             break;
         case GREATER_THAN_EQUAL:
-            pipeline.has(property, Compare.GREATER_THAN_EQUAL, iterator.next());
+            pipeline.has(property, Compare.gte.toString(), iterator.next());
             break;
         case BEFORE:
         case LESS_THAN:
-            pipeline.has(property, Compare.LESS_THAN, iterator.next());
+            pipeline.has(property, Compare.lt.toString(), iterator.next());
             break;
         case LESS_THAN_EQUAL:
-            pipeline.has(property, Compare.LESS_THAN_EQUAL, iterator.next());
+            pipeline.has(property, Compare.lte.toString(), iterator.next());
             break;
         case BETWEEN:
             Object val = iterator.next();
-            pipeline.has(property, Compare.LESS_THAN, val).has(property, Compare.GREATER_THAN, val);
+            pipeline.has(property, Compare.lt.toString(), val).has(property, Compare.gt.toString(), val);
             break;
         case IS_NULL:
-            pipeline.has(property, null);
+            pipeline.has(property);
             break;
         case IS_NOT_NULL:
             pipeline.has(property);
             break;
         case IN:
-            pipeline.has(property, Contains.IN, iterator.next());
+            pipeline.has(property, Contains.within.toString(), iterator.next());
             break;
         case NOT_IN:
-            pipeline.has(property, Contains.NOT_IN, iterator.next());
+            pipeline.has(property, Contains.without.toString(), iterator.next());
             break;
         case LIKE:
-            pipeline.has(property, Like.IS, iterator.next());
+        	//pipeline.has(property, StartStep<S>, iterator.next());
+            pipeline.has(property, Like.IS.toString(), iterator.next());
             break;
         case NOT_LIKE:
-            pipeline.has(property, Like.NOT, iterator.next());
+            pipeline.has(property, Like.NOT.toString(), iterator.next());
             break;
         case STARTING_WITH:
-            pipeline.has(property, StartsWith.DOES, iterator.next());
+            pipeline.has(property, StartsWith.DOES.toString(), iterator.next());
             break;
         case ENDING_WITH:
-            pipeline.has(property, EndsWith.DOES, iterator.next());
+            pipeline.has(property, EndsWith.DOES.toString(), iterator.next());
             break;
         case CONTAINING:
-            pipeline.has(property, Like.IS, iterator.next());
+            pipeline.has(property, Like.IS.toString(), iterator.next());
             break;
         case SIMPLE_PROPERTY:
             pipeline.has(property, iterator.next());
             break;
         case NEGATING_SIMPLE_PROPERTY:
-            pipeline.hasNot(property, iterator.next());
+            //pipeline.hasNot(property, iterator.next()); 标注一下，此处有修改过
+        	pipeline.hasNot(property);
             break;
         case TRUE:
             pipeline.has(property, true);
@@ -247,11 +258,12 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
     }
 
 
-    private enum StartsWith implements Predicate {
+    private enum StartsWith implements BiPredicate<Object, Object> {
         DOES,
         NOT;
 
-        public boolean evaluate(final Object first, final Object second) {
+		@Override
+		public boolean test(final Object first, final Object second) {
             if (first instanceof String && second instanceof String) {
                 return this == DOES && ((String) second).startsWith((String) first);
             }
@@ -259,25 +271,26 @@ public class GremlinQueryCreator extends AbstractQueryCreator<GremlinPipeline, G
         }
     }
 
-    private enum EndsWith implements Predicate {
+    private enum EndsWith implements BiPredicate<Object, Object> {
         DOES,
         NOT;
 
-        public boolean evaluate(final Object first, final Object second) {
-
-            if (first instanceof String && second instanceof String) {
+		@Override
+		public boolean test(final Object first, final Object second) {
+			if (first instanceof String && second instanceof String) {
                 return this == DOES && ((String) second).endsWith((String) first);
             }
             return false;
-        }
+		}
     }
 
-    private enum Like implements Predicate {
+    private enum Like implements BiPredicate<Object, Object> {
 
         IS,
         NOT;
 
-        public boolean evaluate(final Object first, final Object second) {
+		@Override
+		public boolean test(final Object first, final Object second) {
             if (first instanceof String && second instanceof String) {
                 return this == IS && first.toString().toLowerCase().contains(second.toString().toLowerCase());
             }

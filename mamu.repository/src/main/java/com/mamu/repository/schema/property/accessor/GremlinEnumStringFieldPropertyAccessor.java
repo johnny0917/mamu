@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 /**
  * A {@link AbstractGremlinFieldPropertyAccessor} for enum properties that will be mapped with the name (String).
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinEnumStringFieldPropertyAccessor extends AbstractGremlinFieldPropertyAccessor<String> {
 

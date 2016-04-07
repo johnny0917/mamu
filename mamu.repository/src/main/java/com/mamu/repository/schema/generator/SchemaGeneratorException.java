@@ -1,7 +1,7 @@
 package com.mamu.repository.schema.generator;
 
 /**
- * @author Gman
+ * @author Johnny
  */
 public class SchemaGeneratorException extends Exception {
     public SchemaGeneratorException(String message) {

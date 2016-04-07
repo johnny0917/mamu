@@ -13,7 +13,7 @@ import java.util.HashMap;
 /**
  * A {@link AbstractGremlinFieldPropertyAccessor} for Objects serialised as JSON.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinJSONFieldPropertyAccessor extends AbstractGremlinFieldPropertyAccessor<String> {
 

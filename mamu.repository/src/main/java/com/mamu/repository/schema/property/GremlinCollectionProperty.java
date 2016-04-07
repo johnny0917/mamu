@@ -1,12 +1,12 @@
-package org.springframework.data.gremlin.schema.property;
+package com.mamu.repository.schema.property;
 
-import com.tinkerpop.blueprints.Direction;
-import org.springframework.data.gremlin.schema.property.mapper.GremlinCollectionPropertyMapper;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import com.mamu.repository.schema.property.mapper.GremlinCollectionPropertyMapper;
 
 /**
  * A concrete {@link GremlinRelatedProperty} for a Collection
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinCollectionProperty<C> extends GremlinRelatedProperty<C> {
 

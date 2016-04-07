@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
  * Base {@link GremlinPropertyAccessor}
  *
  * @param <V> The result value type of the accessor
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractGremlinFieldPropertyAccessor<V> implements GremlinPropertyAccessor<V> {
 

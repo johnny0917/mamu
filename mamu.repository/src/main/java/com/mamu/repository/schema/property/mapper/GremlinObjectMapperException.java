@@ -1,7 +1,7 @@
-package org.springframework.data.gremlin.schema.property.mapper;
+package com.mamu.repository.schema.property.mapper;
 
 /**
- * @author Gman
+ * @author Johnny
  */
 public class GremlinObjectMapperException extends Throwable {
     public GremlinObjectMapperException(String msg) {super(msg);}

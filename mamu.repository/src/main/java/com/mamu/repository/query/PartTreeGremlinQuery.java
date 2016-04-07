@@ -1,8 +1,10 @@
 package com.mamu.repository.query;
 
-import com.tinkerpop.gremlin.java.GremlinPipeline;
-import com.tinkerpop.pipes.filter.RangeFilterPipe;
-import com.tinkerpop.pipes.util.Pipeline;
+
+import org.apache.tinkerpop.gremlin.process.traversal.Traversal;
+import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal;
+import org.apache.tinkerpop.gremlin.process.traversal.step.filter.RangeGlobalStep;
+import org.apache.tinkerpop.gremlin.process.traversal.step.map.RangeLocalStep;
 import org.springframework.data.domain.Pageable;
 import com.mamu.repository.schema.GremlinSchemaFactory;
 import com.mamu.repository.tx.GremlinGraphFactory;
@@ -13,7 +15,7 @@ import org.springframework.data.repository.query.parser.PartTree;
 /**
  * A concrete {@link AbstractGremlinQuery} implementation based on a {@link PartTree}.
  *
- * @author Gman
+ * @author Johnny
  */
 public class PartTreeGremlinQuery extends AbstractGremlinQuery {
 
@@ -46,16 +48,16 @@ public class PartTreeGremlinQuery extends AbstractGremlinQuery {
      */
     @Override
     @SuppressWarnings("rawtypes")
-    protected Pipeline doRunQuery(DefaultParameters parameters, Object[] values, boolean ignorePaging) {
+    protected Traversal doRunQuery(DefaultParameters parameters, Object[] values, boolean ignorePaging) {
         ParametersParameterAccessor accessor = new ParametersParameterAccessor(parameters, values);
 
         GremlinQueryCreator creator = new GremlinQueryCreator(dbf, schemaFactory, domainClass, tree, accessor);
 
-        GremlinPipeline pipeline = creator.createQuery();
+        GraphTraversal pipeline = creator.createQuery();
 
         Pageable pageable = accessor.getPageable();
         if (pageable != null && !ignorePaging) {
-            pipeline.add(new RangeFilterPipe(pageable.getOffset(), pageable.getOffset() + pageable.getPageSize() - 1));
+        	return pipeline.range(pageable.getOffset(), pageable.getOffset() + pageable.getPageSize() - 1);  
         }
         return pipeline;
     }

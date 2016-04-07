@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Executes the query to return a Map of properties.
  *
- * @author Gman
+ * @author Johnny
  */
 @SuppressWarnings("unchecked")
 public class MapExecution extends AbstractGremlinExecution {

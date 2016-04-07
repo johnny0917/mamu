@@ -1,13 +1,13 @@
 package com.mamu.repository.schema.generator;
 
-import org.springframework.data.gremlin.schema.GremlinSchema;
+import com.mamu.repository.schema.GremlinSchema;
 
 import java.util.Set;
 
 /**
  * An interface defining schema generators.
  *
- * @author Gman
+ * @author Johnny
  */
 public interface SchemaGenerator {
 

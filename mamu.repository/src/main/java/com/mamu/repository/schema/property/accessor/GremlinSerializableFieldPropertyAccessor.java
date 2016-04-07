@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 /**
  * A {@link AbstractGremlinFieldPropertyAccessor} for Serializable properties.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinSerializableFieldPropertyAccessor extends AbstractGremlinFieldPropertyAccessor<byte[]> {
 

@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 /**
  * An abstract factory for creating {@link Graph} objects for concrete implementations.
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractGremlinGraphFactory<T extends Graph> implements GremlinGraphFactory<T> {
 
@@ -71,7 +71,8 @@ public abstract class AbstractGremlinGraphFactory<T extends Graph> implements Gr
 
     @Override
     public T graph() {
-        T graph = (T) TransactionSynchronizationManager.getResource(this);
+        @SuppressWarnings("unchecked")
+		T graph = (T) TransactionSynchronizationManager.getResource(this);
         if (graph == null) {
             graph = openGraph();
             LOGGER.debug("acquire graph from pool {}", graph.hashCode());

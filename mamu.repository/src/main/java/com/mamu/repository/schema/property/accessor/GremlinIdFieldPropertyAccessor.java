@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 /**
  * A {@link GremlinFieldPropertyAccessor} for IDs.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinIdFieldPropertyAccessor extends GremlinFieldPropertyAccessor<String> {
 

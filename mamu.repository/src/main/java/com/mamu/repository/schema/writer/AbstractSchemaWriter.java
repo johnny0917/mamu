@@ -1,20 +1,20 @@
-package org.springframework.data.gremlin.schema.writer;
+package com.mamu.repository.schema.writer;
 
-import com.tinkerpop.blueprints.Direction;
+import org.apache.tinkerpop.gremlin.structure.Direction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.property.GremlinAdjacentProperty;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
-import org.springframework.data.gremlin.schema.property.GremlinRelatedProperty;
-import org.springframework.data.gremlin.tx.GremlinGraphFactory;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.property.GremlinAdjacentProperty;
+import com.mamu.repository.schema.property.GremlinProperty;
+import com.mamu.repository.schema.property.GremlinRelatedProperty;
+import com.mamu.repository.tx.GremlinGraphFactory;
 
-import static org.springframework.data.gremlin.schema.property.GremlinRelatedProperty.CARDINALITY;
+import static com.mamu.repository.schema.property.GremlinRelatedProperty.CARDINALITY;
 
 /**
  * An abstract {@link SchemaWriter} for implementing databases to extend for easy integration.
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractSchemaWriter implements SchemaWriter {
 

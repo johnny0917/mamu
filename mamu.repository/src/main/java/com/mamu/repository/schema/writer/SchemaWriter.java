@@ -1,12 +1,12 @@
-package org.springframework.data.gremlin.schema.writer;
+package com.mamu.repository.schema.writer;
 
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.tx.GremlinGraphFactory;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.tx.GremlinGraphFactory;
 
 /**
  * Interface defining schema writer implementations.
  *
- * @author Gman
+ * @author Johnny
  */
 public interface SchemaWriter {
 

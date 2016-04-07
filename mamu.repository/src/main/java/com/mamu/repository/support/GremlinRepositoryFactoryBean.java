@@ -12,7 +12,7 @@ import org.springframework.data.repository.core.support.TransactionalRepositoryF
  *
  * @param <T> the type of the repository
  * @param <S> the type of the entity
- * @author Gman
+ * @author Johnny
  */
 public class GremlinRepositoryFactoryBean<T extends GremlinRepository<S>, S> extends TransactionalRepositoryFactoryBeanSupport<T, S, String> {
 

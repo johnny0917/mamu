@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.DefaultParameters;
 /**
  * Executes the query to return a sum of entities.
  *
- * @author Gman
+ * @author Johnny
  */
 public class ModifyExecution extends AbstractGremlinExecution {
 

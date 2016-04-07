@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 /**
  * Executes the query to return the sum of entities.
  *
- * @author Gman
+ * @author Johnny
  */
 @SuppressWarnings("unchecked")
 public class CountExecution extends AbstractGremlinExecution {

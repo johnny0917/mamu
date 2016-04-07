@@ -4,10 +4,10 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
-import org.springframework.data.gremlin.annotation.*;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.property.GremlinPropertyFactory;
-import org.springframework.data.gremlin.schema.property.encoder.GremlinPropertyEncoder;
+import com.mamu.repository.annotation.*;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.property.GremlinPropertyFactory;
+import com.mamu.repository.schema.property.encoder.GremlinPropertyEncoder;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.StringUtils;
 
@@ -16,12 +16,12 @@ import java.lang.reflect.Field;
 import java.util.Collection;
 
 /**
- * Default {@link SchemaGenerator} using Java reflection along with annotations defined in {@link org.springframework.data.gremlin.annotation}.
+ * Default {@link SchemaGenerator} using Java reflection along with annotations defined in {@link com.mamu.repository.annotation}.
  * <p>
  * This class can be extended for custom generation.
  * </p>
  *
- * @author Gman
+ * @author Johnny
  */
 public class DefaultSchemaGenerator extends BasicSchemaGenerator implements AnnotatedSchemaGenerator {
 

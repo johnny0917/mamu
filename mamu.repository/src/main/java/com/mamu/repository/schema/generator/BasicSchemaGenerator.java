@@ -5,15 +5,15 @@ import org.apache.commons.lang3.ClassUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
-import org.springframework.data.gremlin.annotation.Index;
-import org.springframework.data.gremlin.schema.GremlinEdgeSchema;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.GremlinVertexSchema;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
-import org.springframework.data.gremlin.schema.property.GremlinPropertyFactory;
-import org.springframework.data.gremlin.schema.property.accessor.*;
-import org.springframework.data.gremlin.schema.property.encoder.GremlinPropertyEncoder;
-import org.springframework.data.gremlin.utils.GenericsUtil;
+import com.mamu.repository.annotation.Index;
+import com.mamu.repository.schema.GremlinEdgeSchema;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.GremlinVertexSchema;
+import com.mamu.repository.schema.property.GremlinProperty;
+import com.mamu.repository.schema.property.GremlinPropertyFactory;
+import com.mamu.repository.schema.property.accessor.*;
+import com.mamu.repository.schema.property.encoder.GremlinPropertyEncoder;
+import com.mamu.repository.utils.GenericsUtil;
 import org.springframework.util.ReflectionUtils;
 
 import java.io.Serializable;
@@ -27,7 +27,7 @@ import java.util.*;
  * This class can and should be extended for custom generation.
  * </p>
  *
- * @author Gman
+ * @author Johnny
  */
 public class BasicSchemaGenerator implements SchemaGenerator {
 

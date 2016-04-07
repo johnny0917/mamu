@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 /**
  * A concrete {@link AbstractGremlinFieldPropertyAccessor} for basic Fields.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinFieldPropertyAccessor<V> extends AbstractGremlinFieldPropertyAccessor<V> {
 

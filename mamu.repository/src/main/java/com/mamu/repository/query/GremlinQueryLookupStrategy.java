@@ -15,7 +15,7 @@ import java.lang.reflect.Constructor;
 /**
  * Implementation of {@link QueryLookupStrategy} for Gremlin.
  *
- * @author Gman
+ * @author Johnny
  */
 public final class GremlinQueryLookupStrategy {
 

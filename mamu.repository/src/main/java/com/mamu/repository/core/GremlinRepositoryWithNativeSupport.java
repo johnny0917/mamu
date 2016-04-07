@@ -8,7 +8,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * <i>Note: </i> This implementation expects an if of type String. To be fixed.
  *
  * @param <T> the generic type to handle
- * @author Gman
+ * @author Johnny
  */
 @NoRepositoryBean
 public interface GremlinRepositoryWithNativeSupport<T> extends GremlinRepository<T> { }

@@ -27,7 +27,7 @@ import java.util.Set;
  * Default implementation of the {@link org.springframework.data.repository.PagingAndSortingRepository} interface for Gremlin.
  *
  * @param <T> the type of the entity to handle
- * @author Gman
+ * @author Johnny
  */
 @Repository
 @Transactional(readOnly = true)
@@ -116,9 +116,9 @@ public class SimpleGremlinRepository<T> implements GremlinRepository<T> {
         } else {
             Element element;
             if (schema.isVertexSchema()) {
-                element = graph.getVertex(schema.decodeId(id));
-            } else if (schema.isVertexSchema()) {
-                element = graph.getEdge(schema.decodeId(id));
+                element = graph.vertices(schema.decodeId(id))!=null?graph.vertices(schema.decodeId(id)).next():null;
+            } else if (schema.isEdgeSchema()) {
+                element = graph.edges(schema.decodeId(id))!=null?graph.edges(schema.decodeId(id)).next():null;
             } else {
                 throw new IllegalStateException("Schema is neither EDGE nor VERTEX!");
             }
@@ -135,7 +135,6 @@ public class SimpleGremlinRepository<T> implements GremlinRepository<T> {
     public <S extends T> S save(S s) {
 
         Graph graph = dbf.graph();
-
         String id = schema.getObjectId(s);
         if (!StringUtils.isEmpty(id)) {
             save(graph, s);
@@ -203,10 +202,10 @@ public class SimpleGremlinRepository<T> implements GremlinRepository<T> {
     public void delete(String id) {
         if (schema.isVertexSchema()) {
             Vertex v = graphAdapter.findVertexById(id);
-            dbf.graph().removeVertex(v);
+            v.remove();
         } else if (schema.isEdgeSchema()) {
-            Edge v = graphAdapter.findEdgeById(id);
-            dbf.graph().removeEdge(v);
+            Edge e = graphAdapter.findEdgeById(id);
+            e.remove();
         }
     }
 

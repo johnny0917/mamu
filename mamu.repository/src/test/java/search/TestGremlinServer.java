@@ -13,6 +13,7 @@ public class TestGremlinServer {
             URL file = TestGremlinServer.class.getResource("remote.yaml") ;
 			Cluster cl = Cluster.open(file.getPath());
 			Client client = cl.connect();
+		    
 			System.out.println(client.submit("1+1").all().join().get(0).getInt());
 			client.close();
 			cl.close();

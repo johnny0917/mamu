@@ -6,7 +6,7 @@ import com.mamu.repository.tx.GremlinGraphFactory;
 /**
  * Native query abstraction for {@link AbstractGremlinQuery}s.
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class AbstractNativeGremlinQuery extends AbstractGremlinQuery {
 

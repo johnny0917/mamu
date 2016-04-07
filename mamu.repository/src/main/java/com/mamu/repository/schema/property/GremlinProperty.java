@@ -1,12 +1,12 @@
-package org.springframework.data.gremlin.schema.property;
+package com.mamu.repository.schema.property;
 
-import com.tinkerpop.blueprints.Element;
-import org.springframework.data.gremlin.annotation.Index.IndexType;
-import org.springframework.data.gremlin.repository.GremlinGraphAdapter;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.property.accessor.GremlinPropertyAccessor;
-import org.springframework.data.gremlin.schema.property.mapper.GremlinPropertyMapper;
-import org.springframework.data.gremlin.schema.property.mapper.GremlinStandardPropertyMapper;
+import org.apache.tinkerpop.gremlin.structure.Element;
+import com.mamu.repository.annotation.Index.IndexType;
+import com.mamu.repository.core.GremlinGraphAdapter;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.property.accessor.GremlinPropertyAccessor;
+import com.mamu.repository.schema.property.mapper.GremlinPropertyMapper;
+import com.mamu.repository.schema.property.mapper.GremlinStandardPropertyMapper;
 
 import java.util.Map;
 
@@ -23,7 +23,7 @@ import java.util.Map;
  * The property also has a name, type and possibly an index.
  * </p>
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinProperty<C> {
 

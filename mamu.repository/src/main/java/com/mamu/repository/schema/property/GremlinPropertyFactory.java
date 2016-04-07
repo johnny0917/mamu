@@ -1,12 +1,12 @@
-package org.springframework.data.gremlin.schema.property;
+package com.mamu.repository.schema.property;
 
-import com.tinkerpop.blueprints.Direction;
-import org.springframework.data.gremlin.annotation.Index;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import com.mamu.repository.annotation.Index;
 
 /**
  * Factory for {@link GremlinProperty}s.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinPropertyFactory {
 

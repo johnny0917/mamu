@@ -7,7 +7,7 @@ import org.springframework.data.repository.core.support.AbstractEntityInformatio
  * An {@link AbstractEntityInformation} for Gremlin.
  *
  * @param <T> The class type of the entity
- * @author Gman
+ * @author Johnny
  */
 public class GremlinMetamodelEntityInformation<T> extends AbstractEntityInformation<T, String> {
 

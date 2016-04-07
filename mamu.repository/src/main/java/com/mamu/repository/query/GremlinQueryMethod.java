@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 /**
  * Gremlin specific extension of {@link QueryMethod} providing the {@link Method} and {@link Query} annotaiton.
  *
- * @author Gman
+ * @author Johnny
  */
 public final class GremlinQueryMethod extends QueryMethod {
 

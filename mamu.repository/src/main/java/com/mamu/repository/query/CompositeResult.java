@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * A query result object containing the mapped entity along with any external properties requested in the query.
  *
- * @author Gman
+ * @author Johnny
  */
 public class CompositeResult<V> {
 

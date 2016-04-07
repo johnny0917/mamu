@@ -1,5 +1,8 @@
 package com.mamu.repository.core;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 import org.apache.tinkerpop.gremlin.structure.Edge;
 import org.apache.tinkerpop.gremlin.structure.Element;
 import org.apache.tinkerpop.gremlin.structure.Graph;
@@ -27,11 +30,17 @@ public class GremlinGraphAdapter<G extends Graph> {
         G graph = graphFactory.graph();
         return createVertex(graph, className);
     }
-
+/**
+ * 构建一个空的Vertex
+ * @param graph
+ * @param className
+ * @return
+ */
     @Transactional(readOnly = false)
     public Vertex createVertex(G graph, String className) {
         LOGGER.info("CREATING VERTEX: " + className);
-        Vertex vertex = graph.addVertex(null); 
+        Vertex vertex = graph.addVertex(new HashMap<>()); 
+        LOGGER.info("CREATING VERTEX:ID="+vertex.id());
         return vertex;
     }
 
@@ -50,34 +59,57 @@ public class GremlinGraphAdapter<G extends Graph> {
             return null;
         }
         G graph = graphFactory.graph();
-        Vertex vertex = graph.getVertex(decodeId(id));
-        if (vertex == null) {
-            vertex = graph.getVertex(id);
+        Iterator<Vertex> vertexs = graph.vertices(decodeId(id));
+        while(vertexs!=null&&vertexs.hasNext()){
+        	return vertexs.next();
         }
-        return vertex;
+        
+        Iterator<Vertex> vertexsNoDecode = graph.vertices(id);
+        while(vertexsNoDecode!=null&&vertexsNoDecode.hasNext()){
+        	return vertexsNoDecode.next();
+        }
+//        Vertex vertex = graph.getVertex(decodeId(id));
+//        if (vertex == null) {
+//            vertex = graph.getVertex(id);
+//        }
+        return null;
     }
 
     @Transactional(readOnly = true)
     public Edge findEdgeById(String id) {
+    	if(id==null||"".equals(id)){
+    		return null;
+    	}
         G graph = graphFactory.graph();
-        Edge edge = graph.getEdge(decodeId(id));
-        if (edge == null) {
-            edge = graph.getEdge(id);
+        
+        Iterator<Edge> edges = graph.edges(decodeId(id));
+        while(edges!=null&&edges.hasNext()){
+        	return edges.next();
         }
-        return edge;
+        
+        Iterator<Edge> edgesNoDecode = graph.edges(id);
+        while(edgesNoDecode!=null&&edgesNoDecode.hasNext()){
+        	return edgesNoDecode.next();
+        }
+        
+//        Edge edge = graph.getEdge(decodeId(id));
+//        if (edge == null) {
+//            edge = graph.getEdge(id);
+//        }
+        return null;
     }
 
     @Transactional(readOnly = true)
     public Vertex getVertex(String id) {
-        if (id == null) {
-            return null;
-        }
-        return graphFactory.graph().getVertex(id);
+//        if (id == null||"".equals(id)) {
+//            return null;
+//        }
+        return this.findVertexById(id);
     }
 
     @Transactional(readOnly = true)
     public Edge getEdge(String id) {
-        return graphFactory.graph().getEdge(id);
+        return this.findEdgeById(id);
     }
 
     @Transactional(readOnly = false)
@@ -93,12 +125,12 @@ public class GremlinGraphAdapter<G extends Graph> {
 
     @Transactional(readOnly = false)
     public void removeEdge(Edge edge) {
-        graphFactory.graph().removeEdge(edge);
+    	edge.remove();
     }
 
     @Transactional(readOnly = false)
     public void removeVertex(Vertex vertexToDelete) {
-        graphFactory.graph().removeVertex(vertexToDelete);
+        vertexToDelete.remove();
     }
 
     public String encodeId(String id) {

@@ -1,4 +1,4 @@
-package org.springframework.data.gremlin.schema;
+package com.mamu.repository.schema;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * A factory for {@link GremlinSchema}s mapped by Class type.
  *
- * @author Gman
+ * @author Johnny
  */
 @Component
 public class GremlinSchemaFactory {

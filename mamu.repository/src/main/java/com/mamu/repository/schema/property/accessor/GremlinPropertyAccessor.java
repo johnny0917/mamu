@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
  * Interface defining an accessor of a {@link GremlinProperty}
  *
  * @param <V> The result value type of the accessor
- * @author Gman
+ * @author Johnny
  */
 public interface GremlinPropertyAccessor<V> {
     V get(Object object);

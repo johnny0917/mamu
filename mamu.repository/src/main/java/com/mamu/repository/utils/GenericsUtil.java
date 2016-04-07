@@ -5,7 +5,7 @@ import java.lang.reflect.*;
 /**
  * A utility class for finding the generic types of Classes, Fields and Methods.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GenericsUtil {
 

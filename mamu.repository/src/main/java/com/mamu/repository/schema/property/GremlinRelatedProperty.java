@@ -1,9 +1,9 @@
-package org.springframework.data.gremlin.schema.property;
+package com.mamu.repository.schema.property;
 
-import com.tinkerpop.blueprints.Direction;
-import org.springframework.data.gremlin.schema.GremlinBeanPostProcessor;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.property.mapper.GremlinPropertyMapper;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import com.mamu.repository.schema.GremlinBeanPostProcessor;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.property.mapper.GremlinPropertyMapper;
 
 import java.util.Collection;
 
@@ -18,7 +18,7 @@ import java.util.Collection;
  * Cascading of related changes is also kept here.
  * </p>
  *
- * @author Gman
+ * @author Johnny
  */
 public abstract class GremlinRelatedProperty<C> extends GremlinProperty<C> {
 

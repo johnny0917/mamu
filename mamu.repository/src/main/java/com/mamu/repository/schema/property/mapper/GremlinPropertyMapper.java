@@ -1,16 +1,16 @@
-package org.springframework.data.gremlin.schema.property.mapper;
+package com.mamu.repository.schema.property.mapper;
 
-import com.tinkerpop.blueprints.Element;
-import com.tinkerpop.blueprints.Vertex;
-import org.springframework.data.gremlin.repository.GremlinGraphAdapter;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
+import org.apache.tinkerpop.gremlin.structure.Element;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
+import com.mamu.repository.core.GremlinGraphAdapter;
+import com.mamu.repository.schema.property.GremlinProperty;
 
 import java.util.Map;
 
 /**
  * Defines mapping a {@link GremlinProperty} to a {@link Vertex}.
  *
- * @author Gman
+ * @author Johnny
  */
 public interface GremlinPropertyMapper<E extends GremlinProperty, V extends Element> {
 

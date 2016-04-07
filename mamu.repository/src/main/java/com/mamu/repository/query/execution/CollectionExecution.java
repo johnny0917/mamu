@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * Executes the query to return a collection of entities.
  *
- * @author Gman
+ * @author Johnny
  */
 public class CollectionExecution extends AbstractGremlinExecution {
 

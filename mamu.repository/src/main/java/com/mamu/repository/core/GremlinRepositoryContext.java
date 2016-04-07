@@ -8,7 +8,7 @@ import com.mamu.repository.tx.GremlinGraphFactory;
 /**
  * An encapsulation of GremlinRepository data.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinRepositoryContext {
 

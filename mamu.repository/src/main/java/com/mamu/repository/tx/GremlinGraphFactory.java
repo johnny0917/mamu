@@ -6,7 +6,7 @@ import org.apache.tinkerpop.gremlin.structure.Graph;
  * An interface defining a Gremlin {@link Graph} factory.
  *
  * @param <T> The implementing type extending {@link Graph}
- * @author Gman
+ * @author Johnny
  */
 public interface GremlinGraphFactory<T extends Graph> {
     /** Default database username. */

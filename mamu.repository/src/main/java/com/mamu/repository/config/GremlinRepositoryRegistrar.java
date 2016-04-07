@@ -6,7 +6,10 @@ import org.springframework.data.repository.config.RepositoryConfigurationExtensi
 import java.lang.annotation.Annotation;
 
 /**
- * {@link org.springframework.context.annotation.ImportBeanDefinitionRegistrar} 允许支持 {@link EnableGremlinRepositories} 注解.
+ * {@link org.springframework.context.annotation.ImportBeanDefinitionRegistrar} 
+ * 允许支持 
+ * {@link EnableGremlinRepositories} 
+ * 注解.
  *
  * @author Johnny
  */

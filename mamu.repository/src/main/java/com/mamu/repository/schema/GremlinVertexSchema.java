@@ -3,9 +3,9 @@ package com.mamu.repository.schema;
 import org.apache.tinkerpop.gremlin.structure.Direction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.gremlin.schema.property.GremlinAdjacentProperty;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
-import org.springframework.data.gremlin.schema.property.accessor.GremlinFieldPropertyAccessor;
+import com.mamu.repository.schema.property.GremlinAdjacentProperty;
+import com.mamu.repository.schema.property.GremlinProperty;
+import com.mamu.repository.schema.property.accessor.GremlinFieldPropertyAccessor;
 
 
 /**
@@ -17,7 +17,7 @@ import org.springframework.data.gremlin.schema.property.accessor.GremlinFieldPro
  * The GremlinSchema contains the high level logic for converting Vertices to mapped classes.
  * </p>
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinVertexSchema<V> extends GremlinSchema<V> {
 

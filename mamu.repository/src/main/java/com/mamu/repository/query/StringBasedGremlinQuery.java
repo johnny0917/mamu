@@ -2,7 +2,8 @@ package com.mamu.repository.query;
 
 import org.apache.tinkerpop.gremlin.structure.Graph;
 import org.apache.tinkerpop.gremlin.groovy.jsr223.GremlinGroovyScriptEngine;
-import com.tinkerpop.pipes.util.Pipeline;
+import org.apache.tinkerpop.gremlin.process.traversal.Traversal;
+
 import org.springframework.data.domain.Pageable;
 import com.mamu.repository.schema.GremlinSchemaFactory;
 import com.mamu.repository.tx.GremlinGraphFactory;
@@ -18,7 +19,7 @@ import javax.script.ScriptException;
 /**
  * A concrete {@link AbstractGremlinQuery} which handles String based gremlin queries defined using the {@link com.mamu.repository.query.annotation.Query} annotation.
  *
- * @author Gman
+ * @author Johnny
  */
 public class StringBasedGremlinQuery extends AbstractGremlinQuery {
 
@@ -40,7 +41,7 @@ public class StringBasedGremlinQuery extends AbstractGremlinQuery {
 
     @Override
     @SuppressWarnings("rawtypes")
-    protected Pipeline doRunQuery(DefaultParameters parameters, Object[] values, boolean ignorePaging) {
+    protected Traversal doRunQuery(DefaultParameters parameters, Object[] values, boolean ignorePaging) {
 
         ScriptEngine engine = new GremlinGroovyScriptEngine();
         Bindings bindings = engine.createBindings();
@@ -72,7 +73,7 @@ public class StringBasedGremlinQuery extends AbstractGremlinQuery {
         }
 
         try {
-            return (Pipeline) engine.eval(queryString, bindings);
+            return (Traversal) engine.eval(queryString, bindings);
         } catch (ScriptException e) {
             throw new IllegalArgumentException(String.format("Could not evaluate Gremlin query String %s. Error: %s ", queryString, e.getMessage()), e);
         }

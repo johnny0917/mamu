@@ -1,7 +1,7 @@
-package org.springframework.data.gremlin.schema.writer;
+package com.mamu.repository.schema.writer;
 
 /**
- * @author Gman
+ * @author Johnny
  */
 public class SchemaWriterException extends Exception {
     public SchemaWriterException(String message) {

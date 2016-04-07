@@ -1,22 +1,24 @@
 package com.mamu.repository.schema.property.mapper;
 
-import com.tinkerpop.blueprints.Direction;
-import com.tinkerpop.blueprints.Edge;
-import com.tinkerpop.blueprints.Vertex;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import org.apache.tinkerpop.gremlin.structure.Edge;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
+import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerProperty;
 import org.apache.commons.collections4.CollectionUtils;
-import org.springframework.data.gremlin.repository.GremlinGraphAdapter;
-import org.springframework.data.gremlin.schema.GremlinSchema;
-import org.springframework.data.gremlin.schema.property.GremlinRelatedProperty;
+import com.mamu.repository.core.GremlinGraphAdapter;
+import com.mamu.repository.schema.GremlinSchema;
+import com.mamu.repository.schema.property.GremlinRelatedProperty;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
 /**
  * A concrete {@link GremlinPropertyMapper} mapping a vertices property to a Collection.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinCollectionPropertyMapper implements GremlinPropertyMapper<GremlinRelatedProperty, Vertex> {
 
@@ -27,8 +29,14 @@ public class GremlinCollectionPropertyMapper implements GremlinPropertyMapper<Gr
         // Get the Set of existing linked vertices for this property
         Set<Vertex> existingLinkedVertices = new HashSet<Vertex>();
         Set<Vertex> actualLinkedVertices = new HashSet<Vertex>();
-        for (Edge currentEdge : vertex.getEdges(property.getDirection(), property.getName())) {
-            existingLinkedVertices.add(currentEdge.getVertex(property.getDirection().opposite()));
+        Iterator<Edge> edges = vertex.edges(property.getDirection(), property.getName());
+        while(edges!=null&&edges.hasNext()){
+        	Edge currentEdge = edges.next();
+        	Iterator<Vertex> existingVertexs = currentEdge.bothVertices();
+        	while(existingVertexs!=null&&existingVertexs.hasNext()){
+        		existingLinkedVertices.add(existingVertexs.next());
+        	}
+        	
         }
 
         // Now go through the collection of linked Objects
@@ -68,8 +76,9 @@ public class GremlinCollectionPropertyMapper implements GremlinPropertyMapper<Gr
 
         // For each disjointed vertex, remove it and the Edge associated with this property
         for (Vertex vertexToDelete : CollectionUtils.disjunction(existingLinkedVertices, actualLinkedVertices)) {
-            for (Edge edge : vertexToDelete.getEdges(property.getDirection().opposite(), property.getName())) {
-                graphAdapter.removeEdge(edge);
+        	Iterator<Edge> edgesToDelete = vertexToDelete.edges(property.getDirection().opposite(), property.getName());
+            while (edgesToDelete!=null&&edgesToDelete.hasNext()) {
+                graphAdapter.removeEdge(edgesToDelete.next());
             }
             graphAdapter.removeVertex(vertexToDelete);
         }
@@ -82,11 +91,18 @@ public class GremlinCollectionPropertyMapper implements GremlinPropertyMapper<Gr
 
     private <V> Set<V> loadCollection(GremlinSchema<V> schema, GremlinRelatedProperty property, Vertex vertex, Map<Object, Object> cascadingSchemas) {
         Set<V> collection = new HashSet<V>();
-        for (Edge outEdge : vertex.getEdges(property.getDirection(), property.getName())) {
-            Vertex inVertex = outEdge.getVertex(property.getDirection().opposite());
-            V linkedObject = schema.cascadeLoadFromGraph(inVertex, cascadingSchemas);
-            collection.add(linkedObject);
+        Iterator<Edge> outEdges = vertex.edges(property.getDirection(), property.getName());
+        while(outEdges!=null&&outEdges.hasNext()){
+        	Edge outEdge = outEdges.next();
+        	Iterator<Vertex> inVertexs = outEdge.vertices(property.getDirection().opposite());
+        	while(inVertexs!=null&&inVertexs.hasNext()){
+        		V linkedObject = schema.cascadeLoadFromGraph(inVertexs.next(), cascadingSchemas);
+        		collection.add(linkedObject);
+        	}
+            
+            
         }
+
         return collection;
     }
 }

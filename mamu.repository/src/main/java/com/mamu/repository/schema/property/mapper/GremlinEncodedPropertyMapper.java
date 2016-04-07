@@ -1,16 +1,16 @@
-package org.springframework.data.gremlin.schema.property.mapper;
+package com.mamu.repository.schema.property.mapper;
 
-import com.tinkerpop.blueprints.Element;
-import org.springframework.data.gremlin.repository.GremlinGraphAdapter;
-import org.springframework.data.gremlin.schema.property.GremlinProperty;
-import org.springframework.data.gremlin.schema.property.encoder.GremlinPropertyEncoder;
+import org.apache.tinkerpop.gremlin.structure.Element;
+import com.mamu.repository.core.GremlinGraphAdapter;
+import com.mamu.repository.schema.property.GremlinProperty;
+import com.mamu.repository.schema.property.encoder.GremlinPropertyEncoder;
 
 import java.util.Map;
 
 /**
  * An extended {@link GremlinStandardPropertyMapper} for mapping custom encoded properties.
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinEncodedPropertyMapper extends GremlinStandardPropertyMapper {
 

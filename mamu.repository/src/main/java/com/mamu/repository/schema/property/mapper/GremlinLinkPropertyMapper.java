@@ -1,12 +1,13 @@
-package org.springframework.data.gremlin.schema.property.mapper;
+package com.mamu.repository.schema.property.mapper;
 
-import com.tinkerpop.blueprints.Direction;
-import com.tinkerpop.blueprints.Edge;
-import com.tinkerpop.blueprints.Vertex;
-import org.springframework.data.gremlin.repository.GremlinGraphAdapter;
-import org.springframework.data.gremlin.schema.property.GremlinLinkProperty;
-import org.springframework.data.gremlin.schema.property.GremlinRelatedProperty;
+import org.apache.tinkerpop.gremlin.structure.Direction;
+import org.apache.tinkerpop.gremlin.structure.Edge;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
+import com.mamu.repository.core.GremlinGraphAdapter;
+import com.mamu.repository.schema.property.GremlinLinkProperty;
+import com.mamu.repository.schema.property.GremlinRelatedProperty;
 
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Map;
  * <li>{@link Direction} direction - The direction of the link associated with this property mapper</li>
  * </ul>
  *
- * @author Gman
+ * @author Johnny
  */
 public class GremlinLinkPropertyMapper implements GremlinPropertyMapper<GremlinRelatedProperty, Vertex> {
 
@@ -26,10 +27,16 @@ public class GremlinLinkPropertyMapper implements GremlinPropertyMapper<GremlinR
         Vertex linkedVertex = null;
 
         // get the current edge for this property
-        Iterable<Edge> edges = vertex.getEdges(property.getDirection(), property.getName());
-        if (edges.iterator().hasNext()) {
-            Edge linkedEdge = edges.iterator().next();
-            linkedVertex = linkedEdge.getVertex(property.getDirection().opposite());
+        Iterator<Edge> edges = vertex.edges(property.getDirection(), property.getName());
+        if (edges.hasNext()) {
+            Edge linkedEdge = edges.next();
+            
+            Iterator<Vertex> vertexs = linkedEdge.vertices(property.getDirection().opposite());
+            while(vertexs!=null&&vertexs.hasNext()){
+            	if(!vertexs.next().equals(vertex)){
+            		linkedVertex = vertex;
+            	}
+            }
         } else {
             // No current edge, get it
             linkedVertex = (Vertex) cascadingSchemas.get(val);
@@ -59,12 +66,16 @@ public class GremlinLinkPropertyMapper implements GremlinPropertyMapper<GremlinR
     public <K> Object loadFromVertex(GremlinRelatedProperty property, Vertex vertex, Map<Object, Object> cascadingSchemas) {
 
         Object val = null;
-        for (Edge outEdge : vertex.getEdges(property.getDirection(), property.getName())) {
-
-            Vertex cascadingVertex = outEdge.getVertex(property.getDirection().opposite());
-            val = property.getRelatedSchema().cascadeLoadFromGraph(cascadingVertex, cascadingSchemas);
-            //            val = property.getRelatedSchema().loadFromGraph(cascadingVertex);
-            break;
+        Iterator<Edge> outEdges = vertex.edges(property.getDirection(), property.getName());
+        while(outEdges!=null&&outEdges.hasNext()){
+        	Edge outEdge = outEdges.next();
+        	Iterator<Vertex> vertexs = outEdge.vertices(property.getDirection().opposite());
+        	while(vertexs!=null&&vertexs.hasNext()){
+        		Vertex cascadingVertex = vertexs.next();
+        		if(!cascadingVertex.equals(vertex)){
+        			val = property.getRelatedSchema().cascadeLoadFromGraph(cascadingVertex, cascadingSchemas);
+        		}
+        	}
         }
 
         return val;
